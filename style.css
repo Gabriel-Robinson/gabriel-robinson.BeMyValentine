@@ -32,10 +32,71 @@ button {
     color: white;
 }
 
+#yesBtn:hover {
+    background-color: #ff7f7f;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
 #noBtn {
     background-color: #ccc;
 }
 
 button:hover {
     transform: scale(1.1);
+}
+
+@keyframes float-hearts {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-500px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.floating-heart {
+    position: absolute;
+    animation: float-hearts 5s ease-in infinite;
+    font-size: 30px;
+    color: #ff4d4d;
+    z-index: 1;
+}
+
+.heart-1 {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.heart-2 {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.heart-3 {
+    left: 60%;
+    animation-delay: 2s;
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+h1 {
+    animation: bounce 1.5s infinite;
+    color: #ff4d4d;
+}
+
+@keyframes colorChange {
+    0% { color: #ff4d4d; }
+    50% { color: #ff7f7f; }
+    100% { color: #ff4d4d; }
+}
+
+h1 {
+    animation: colorChange 2s infinite;
 }
