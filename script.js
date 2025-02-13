@@ -1,5 +1,12 @@
 document.getElementById("yesBtn").addEventListener("click", function() {
     document.getElementById("message").innerText = "Yay! I knew you'd say yes! ❤️";
+
+    // Fire confetti 🎉
+    confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
 });
 
 document.getElementById("noBtn").addEventListener("mouseover", function() {
@@ -10,13 +17,3 @@ document.getElementById("noBtn").addEventListener("mouseover", function() {
     this.style.top = `${y}px`;
 });
 
-document.getElementById("yesBtn").addEventListener("click", function() {
-    document.getElementById("message").innerText = "Yay! I knew you'd say yes! ❤️";
-    
-    // Fire confetti 🎉
-    confetti({
-        particleCount: 200,
-        spread: 70,
-        origin: { y: 0.6 }
-    });
-});
